@@ -1,0 +1,11 @@
+FROM python:3.12
+
+WORKDIR app/
+
+COPY requirement.txt .
+
+RUN pip install -r requirement.txt 
+
+COPYclear app.py .
+
+CMD ["python", "app.py"]
